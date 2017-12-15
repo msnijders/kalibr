@@ -15,17 +15,17 @@ class CreateExceldatasTable extends Migration
     {
         Schema::create('exceldatas', function (Blueprint $table) {
             $table->increments('id');
-            // Upload ID 
             $table->integer('uploadId');
             $table->string('weld');
-            $table->decimal('diameter', 10, 4);
-            $table->decimal('thicknes', 10, 4);
+            $table->string('diameter');
+            $table->string('thicknes');
             $table->string('surname');
             $table->string('steelgrade');
             $table->string('material');
-            $table->date('weldingdate');
+            $table->string('weldingdate');
             $table->string('welderid');
-            $table->date('documentdate');
+            $table->string('requestid');
+            $table->string('documentdate');
             $table->timestamps();
         });
     }
