@@ -20,7 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 // Importing Routing
-Route::get('/fileupload', 'UploadController@import');
-Route::post('importExcel', 'UploadController@importExcel');
+Route::get('/fileupload', 'UploadController@index');
+Route::post('importExcel', 'UploadController@main');
 
 // Download
