@@ -24,3 +24,4 @@ Route::get('/fileupload', 'UploadController@index');
 Route::post('importExcel', 'UploadController@main');
 
 // Download
+Route::get('/download', 'DownloadController@main');

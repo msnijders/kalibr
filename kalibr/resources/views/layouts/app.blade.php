@@ -50,7 +50,7 @@
                               <a href="{{ url('/fileupload')}}">Upload File</a>
                             </li>
                             <li>
-                              <a href="{{ url('/fileupload')}}">Download File</a>
+                              <a href="{{ url('/download')}}">Download File</a>
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
