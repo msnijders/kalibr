@@ -112,7 +112,7 @@ class Exceldata extends Model
 
 
    // Get data
-   public static function getData($data)
+   public static function storeExcel($data)
    {
 
      // $uploadId = $this->getUploadId();

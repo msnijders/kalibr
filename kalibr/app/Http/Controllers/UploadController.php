@@ -21,6 +21,15 @@ class UploadController extends Controller
 
 	}
 
+	public function main(Request $request, Exceldata $exceldata)
+  {
+
+    $this->getImportFile($request);
+
+    return view('fileupload');
+
+  }
+
   public function getImportFile(Request $request)
   {
 
@@ -41,15 +50,6 @@ class UploadController extends Controller
       });
 
     }
-
-  }
-
-  public function main(Request $request, Exceldata $exceldata)
-  {
-
-    $this->getImportFile($request);
-
-    return view('fileupload');
 
   }
 

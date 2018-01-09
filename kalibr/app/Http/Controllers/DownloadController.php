@@ -12,17 +12,14 @@ class DownloadController extends Controller
     public function main()
     {
 
-      // $exceldata = Exceldata::where([
-      //   'diameter' => '21.3',
-      //   'thicknes' => '2.5',
-      //   'steelgrade' => 'Ст20',
-      //
-      //   ])->get();
+      // $exceldata = $this->data1();
 
-      $exceldata = $this->data1();
+      Exceldata::storeExcel($this->data1());
 
+      // $exceldata2 = $this->data2();
 
-      return Exceldata::getData($exceldata);
+      Exceldata::storeExcel($this->data2());
+
 
 
     }
@@ -34,6 +31,19 @@ class DownloadController extends Controller
         'diameter' => '21.3',
         'thicknes' => '2.5',
         'steelgrade' => '12Х18Н10Т',
+      ])->get();
+
+      return $exceldata;
+
+    }
+
+    public function data2()
+    {
+
+      $exceldata = Exceldata::where([
+        'diameter' => '21.3',
+        'thicknes' => '2.5',
+        'steelgrade' => 'Ст20',
       ])->get();
 
       return $exceldata;
